@@ -17,8 +17,8 @@ create table ismember(
   firstname varchar(30),
   lastname varchar(30),
   committeename varchar(30),
-  foriegn key(firstname, lastname) references Committee_Member(fname, lname) on delete cascade,
-  foriegn key(comitteename) referneces Subcomittee(name) on delete cascade
+  foriegn key (firstname, lastname) references Committee_Member(fname, lname) on delete cascade,
+  foriegn key (comitteename) referneces Subcomittee(name) on delete cascade
   
   );
 
@@ -61,5 +61,5 @@ insert info ismember values ('Kevin','Glasek','Finance');
 insert info ismember values ('Jacob','Glasek','Sponsors');
 insert info ismember values ('Sam','Marchetti','Program');
 insert info ismember values ('Carie','Trimble','Program');
-insert info ismember values ('Jordan','Rogers',,'Sponsors');
+insert info ismember values ('Jordan','Rogers','Sponsors');
   
