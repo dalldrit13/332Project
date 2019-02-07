@@ -40,8 +40,26 @@ insert info Committee_Member values ('Jordan','Rogers');
   
   
  /* SubComittee */
-  
-  
+insert info Subcommittee values ('Program','Abigail','Kozma');  
+insert info Subcommittee values ('Registration','Matt','Kruzich');  
+insert info Subcommittee values ('Sponsors','Devin','Alldrit');
+insert info Subcommittee values ('Room_Assignment','Tamara','Djukic');
+insert info Subcommittee values ('Finance','Molly','White');
+
   
 /* is member */
+insert info ismember values ('Abigail','Kozma', 'Program');
+insert info ismember values ('Matt','Kruzich', 'Registration');
+insert info ismember values ('Brad','Pitt','Sponsors');
+insert info ismember values ('Devin','Alldrit','Sponsors');
+insert info ismember values ('Tamara','Djukic', 'Room_Assignment');
+insert info ismember values ('Maddie','Leranbaum',,'Sponsors');
+insert info ismember values ('Molly','White', 'Finance');
+insert info ismember values ('Sarah','Smith','Sponsors');
+insert info ismember values ('Sydney','Wilson','Finance');
+insert info ismember values ('Kevin','Glasek','Finance');
+insert info ismember values ('Jacob','Glasek','Sponsors');
+insert info ismember values ('Sam','Marchetti','Program');
+insert info ismember values ('Carie','Trimble','Program');
+insert info ismember values ('Jordan','Rogers',,'Sponsors');
   
