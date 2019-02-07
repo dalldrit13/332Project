@@ -54,7 +54,7 @@ insert into ismember values ('Matt','Kruzich', 'Registration');
 insert into ismember values ('Brad','Pitt','Sponsors');
 insert into ismember values ('Devin','Alldrit','Sponsors');
 insert into ismember values ('Tamara','Djukic', 'Room_Assignment');
-insert into ismember values ('Maddie','Leranbaum',,'Sponsors');
+insert into ismember values ('Maddie','Leranbaum','Sponsors');
 insert into ismember values ('Molly','White', 'Finance');
 insert into ismember values ('Sarah','Smith','Sponsors');
 insert into ismember values ('Sydney','Wilson','Finance');
