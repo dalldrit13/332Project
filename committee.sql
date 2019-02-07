@@ -22,3 +22,26 @@ create table ismember(
   
   );
 
+/* Comittee Member */
+insert info Committee_Member values ('Abigail','Kozma');
+insert info Committee_Member values ('Matt','Kruzich');
+insert info Committee_Member values ('Brad','Pitt');
+insert info Committee_Member values ('Devin','Alldrit');
+insert info Committee_Member values ('Tamara','Djukic');
+insert info Committee_Member values ('Maddie','Leranbaum');
+insert info Committee_Member values ('Molly','White');
+insert info Committee_Member values ('Sarah','Smith');
+insert info Committee_Member values ('Sydney','Wilson');
+insert info Committee_Member values ('Kevin','Glasek');
+insert info Committee_Member values ('Jacob','Glasek');
+insert info Committee_Member values ('Sam','Marchetti');
+insert info Committee_Member values ('Carie','Trimble');
+insert info Committee_Member values ('Jordan','Rogers');
+  
+  
+ /* SubComittee */
+  
+  
+  
+/* is member */
+  
