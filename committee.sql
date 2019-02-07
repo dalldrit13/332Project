@@ -17,8 +17,8 @@ create table ismember(
   firstname varchar(30),
   lastname varchar(30),
   committeename varchar(30),
-  foriegn key(firstname, lastname) references Committee_Member(fname, lname),
-  foriegn key(comitteename) referneces Subcomittee(name)
+  foriegn key(firstname, lastname) references Committee_Member(fname, lname) on delete cascade,
+  foriegn key(comitteename) referneces Subcomittee(name) on delete cascade
   
   );
 
