@@ -1,10 +1,10 @@
 drop table if exists job_posting;
-drop table if exists Sponsor;
+drop table if exists sponsor;
 drop table if exists company;
-drop table if exists Professional;
-drop table if exists Student;
-drop table if exists Room;
-drop table if exists IsSpeaker;
+drop table if exists professional;
+drop table if exists student;
+drop table if exists room;
+drop table if exists isSpeaker;
 drop table if exists attendees;
 drop table if exists session;
 
@@ -29,14 +29,14 @@ create table attendees(
   last_name   varchar(30) not null,
   primary key(first_name, last_name)
 );
-create table Professional(
+create table professional(
   first_name  varchar(30) not null,
   last_name   varchar(30) not null,
   primary key(first_name, last_name),
   foreign key(first_name, last_name) references attendees(first_name, last_name) on delete cascade
 );
 
-create table Sponsor(
+create table sponsor(
   first_name  varchar(30) not null,
   last_name   varchar(30) not null,
   company_name varchar(20) not null,
@@ -45,20 +45,20 @@ create table Sponsor(
   foreign key(company_name) references company(name)
 );
 
-create table Room(
+create table room(
   room_number int not null,
   number_beds int not null,
   occupancy int,
   primary key (room_number)
 );
 
-create table Student(
+create table student(
   first_name  varchar(30) not null,
   last_name   varchar(30) not null,
   room_number int,
   primary key (first_name, last_name),
   foreign key(first_name, last_name) references attendees(first_name, last_name) on delete cascade,
-  foreign key(room_number) references Room(room_number)
+  foreign key(room_number) references room(room_number)
 );
 
 create table session(
@@ -69,7 +69,7 @@ create table session(
   day           int,
   primary key(session_name, start_time, day)
 );
-create table IsSpeaker(
+create table isSpeaker(
   first_name    varchar(30) not null,
   last_name     varchar(30) not null,
   session_name  varchar(32) not null,
