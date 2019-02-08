@@ -79,3 +79,20 @@ create table IsSpeaker(
   foreign key (first_name, last_name) references attendees(first_name, last_name) on delete cascade,
   foreign key(session_name, start_time, day) references session(session_name, start_time, day) on delete cascade
 );
+
+insert into company values('Google', 'Platinum', 5);
+insert into company values('Google', 'Platinum', 5);
+insert into company values('Facebook', 'Gold', 4);
+insert into company values('AudienceView', 'Bronze', 0);
+insert into company values('Microsoft','Silver',3);
+insert into company values('OrangeGate','Platinum',5);
+insert into company values('ecobee', 'Bronze', 0);
+
+insert into job_posting values('Google', 'Software Dev', 'Toronto', 'Ontario', 20);
+insert into job_posting values('Google', 'Software Analyst', 'Toronto', 'Ontario', 15);
+insert into job_posting values('Microsoft', 'Full Stack Dev', 'Toronto', 'Ontario', 15);
+insert into job_posting values('Microsoft', 'Software Dev', 'Toronto', 'Ontario', 18);
+insert into job_posting values('OrangeGate', 'Robotics Engineer', 'Toronto', 'Ontario', 17);
+insert into job_posting values('ecobee', 'Embedded Systems Dev', 'Toronto', 'Ontario', 19);
+insert into job_posting values('Google', 'C++ Programmer', 'Toronto', 'Ontario', 21);
+insert into job_posting values('Facebook', 'DataBase Dev', 'Toronto', 'Ontario', 16);
