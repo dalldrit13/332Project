@@ -80,7 +80,7 @@ create table IsSpeaker(
   foreign key(session_name, start_time, day) references session(session_name, start_time, day) on delete cascade
 );
 
-insert into company values('Google', 'Platinum', 5);
+
 insert into company values('Google', 'Platinum', 5);
 insert into company values('Facebook', 'Gold', 4);
 insert into company values('AudienceView', 'Bronze', 0);
