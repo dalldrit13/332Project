@@ -1,3 +1,4 @@
+use Conference_332;
 drop table if exists ismember;
 drop table if exists Subcommittee;
 drop table if exists Committee_Member;
@@ -92,7 +93,7 @@ create table isInRoom(
   last_name   varchar(30) not null,
   room_number int,
   primary key(first_name, last_name, room_number),
-  foreign key(first_name, last_name) references student(first_name, last_name),
+  foreign key(first_name, last_name) references student(first_name, last_name)on delete cascade,
   foreign key(room_number) references room(room_number)
 );
 
