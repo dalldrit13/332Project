@@ -1,9 +1,8 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html>
 
 <head>
   <link rel="stylesheet" href="conference.css">
-
 </head>
 
 <body>
@@ -40,16 +39,22 @@
           <option value="Finance">Finance</option>
           <option value="Room Assignment">Room Assignment</option>
         </select>
-      <input type='submit'>
+      <input type='submit' class='Button'>
     </form>
   </div>
   <a class='MiniHeading' name = 'attendees'> Attendees</a>
   <form action='addAttendee.php' method='post'>
     <p>First Name</p>
     <input type='text' name="firstname">
-    <br>
     <p>Last Name</p>
     <input type='text' name='lastname'>
+    <select name="type" onchange='CheckSponsor(this.value);'>
+      <option value="student">Student</option>
+      <option value="professional">Professional</option>
+      <option value="sponsor">Sponsor</option>
+    </select>
+    <p>Company Name (If Sponsor)</p>
+    <input type="text" name="companyname">
     <input type='submit'>
   </form>
   <div style='width:100%; height:500px'></div>
