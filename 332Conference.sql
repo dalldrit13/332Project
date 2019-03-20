@@ -136,7 +136,7 @@ insert into Committee_Member values ('Jordan','Rogers');
 insert into Subcommittee values ('Program','Abigail','Kozma');
 insert into Subcommittee values ('Registration','Matt','Kruzich');
 insert into Subcommittee values ('Sponsors','Devin','Alldrit');
-insert into Subcommittee values ('Room_Assignment','Tamara','Djukic');
+insert into Subcommittee values ('Room Assignment','Tamara','Djukic');
 insert into Subcommittee values ('Finance','Molly','White');
 
 /*=========================== is member ===============================*/
@@ -144,7 +144,7 @@ insert into ismember values ('Abigail','Kozma', 'Program');
 insert into ismember values ('Matt','Kruzich', 'Registration');
 insert into ismember values ('Brad','Pitt','Sponsors');
 insert into ismember values ('Devin','Alldrit','Sponsors');
-insert into ismember values ('Tamara','Djukic', 'Room_Assignment');
+insert into ismember values ('Tamara','Djukic', 'Room Assignment');
 insert into ismember values ('Maddie','Leranbaum','Sponsors');
 insert into ismember values ('Molly','White', 'Finance');
 insert into ismember values ('Sarah','Smith','Sponsors');
@@ -250,7 +250,7 @@ insert into isInRoom values('Oliver', 'Wood', 209);
 insert into isInRoom values('Nicholas', 'Flamel', 209);
 
 
-/*===================== sponsrs ---------------------------------*/
+/*===================== sponsors ---------------------------------*/
 insert into attendees values('Harold', 'Choy');
 insert into attendees values('Henry', 'Thompson');
 insert into attendees values('Susie', 'Lung');
