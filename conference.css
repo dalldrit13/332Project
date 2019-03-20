@@ -1,0 +1,134 @@
+body .header-bg {
+  background-image: url("database.jpg");
+}
+
+.topnav{
+  background-color: #333;
+  overflow: hidden;
+}
+.topnav a{
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+.select {
+  width: 20vw;
+  font-size: 2vw;
+  background-color: rgb(82,175,192);
+  color: #ffffff;
+  height: 3vw;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: ("databaseIcon.jpg") 96% / 15% no-repeat #eee;
+}
+
+.MiniHeading {
+      font-family: Futura;
+      font-size: 10vw;
+      font-weight: bold;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      /* text-align: center; */
+      color: #33446a;
+    }
+.MiniText{
+      /*width: 470px;
+      height: 251px; */
+      margin: 0 auto;
+      width:28vw;
+      font-family: AvenirNext;
+      font-size: 24px;
+      font-size: 1.8vw;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: justify;
+      color: #000000;
+    }
+.Button {
+      width: 15vw;
+      height: 6vw;
+      border-radius: 41px;
+      border-color: #33446a;
+      background-color: #ffffff;
+      /*Text*/
+      font-family: GoogleSans;
+      font-size: 2vw;
+      font-weight: 500;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: center;
+      color: #33446a;
+    }
+.Button:hover{
+  color: #ffffff;
+  background-color: #33446a;
+}
+.Rectangle {
+      width: 100%;
+      height: 17vw;
+      background-color: #daecf1;
+    }
+.Header-title1 {
+  font-family: GoogleSans;
+  font-size: 86px;
+  font-size: 6vw;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 5.1px;
+  color: #ffffff;
+}
+.Header-title2 {
+  font-family: Futura;
+  font-size: 144px;
+  font-size: 9vw;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 3.2px;
+  color: #ffffff;
+}
+
+
+
+@font-face {
+  font-family: 'Futura';
+  src: url("fonts/FuturaBT-Book.eot?#iefix") format("embedded-opentype"), url("fonts/FuturaBT-Book.woff") format("woff"), url("fonts/FuturaBT-Book.ttf") format("truetype"), url("fonts/FuturaBT-Book.svg#FuturaBT-Book") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Futura';
+  src: url("fonts/Futura-Bold.eot?#iefix") format("embedded-opentype"), url("fonts/Futura-Bold.woff") format("woff"), url("fonts/Futura-Bold.ttf") format("truetype"), url("fonts/Futura-Bold.svg#Futura-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url("fonts/OpenSans-Regular.eot?#iefix") format("embedded-opentype"), url("fonts/OpenSans-Regular.woff") format("woff"), url("fonts/OpenSans-Regular.ttf") format("truetype"), url("fonts/OpenSans-Regular.svg#OpenSans-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
