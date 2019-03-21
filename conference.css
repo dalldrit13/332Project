@@ -25,6 +25,7 @@ body .header-bg {
   background-color: #4CAF50;
   color: white;
 }
+
 .select {
   width: 20vw;
   font-size: 2vw;
@@ -48,6 +49,24 @@ height:0;
 border: 6px solid transparent;
 border-color: #fff transparent transparent;
 }
+
+.table_sponsor{
+border-radius: 0.8vw;
+border: 0.5vw solid;
+border-color:#33446a;
+}
+.table_sponsor th{
+  height:3.5vw;
+  border-bottom:0.2vw solid;
+  border color:#33446a;
+}
+.table_sponsor td{
+  height:2vw;
+  border-right:0.2vw solid;
+  border-bottom:0.2vw solid;
+  border-color:#33446a;
+}
+
 .MiniHeading {
       font-family: Futura;
       font-size: 5vw;
@@ -60,13 +79,8 @@ border-color: #fff transparent transparent;
       color: #33446a;
     }
 .MiniText{
-      /*width: 470px;
-      height: 251px; */
-      margin: 0 auto;
-      width:28vw;
       font-family: AvenirNext;
-      font-size: 24px;
-      font-size: 1.8vw;
+      font-size: 1.75vw;
       font-weight: normal;
       font-style: normal;
       font-stretch: normal;

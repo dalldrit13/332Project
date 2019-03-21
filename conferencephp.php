@@ -7,9 +7,9 @@
 
 <body>
   <?php
-  $dbh = new PDO("mysql:host=localhost;dbname=Conference_332", "root", "");
+  require 'header.php';
   ?>
-  <header class="header-bg" style= 'background-size: 100%; height:50vw'>
+  <header class="header-bg" style= 'background-size: 100%; height:40vw'>
     <div class="topnav">
       <a href="#committee">Committee</a>
       <a href="#attendees">Attendees</a>
@@ -59,7 +59,33 @@
   </form>
   <div style='width:100%; height:500px'></div>
   <a class='MiniHeading' name = 'sponsors'> Sponsors</a>
-
+<table class='table_sponsor MiniText'>
+  <thead>
+    <tr>
+      <th>Company Name</th>
+      <th>Sponsor Level</th>
+    </tr>
+  </thead>
+  <tbody>
+  <?php
+  $sql = "SELECT name, sponsorship_level FROM company";
+  $stmt = $dbh->prepare($sql);
+  $stmt->execute();
+  $rows = $stmt->fetchAll();
+  if(!is_array($rows)){
+    print_r($rows);
+    echo "error no companies yet";
+  }
+  if(is_array($rows)):
+  foreach($rows as $row):?>
+  <tr>
+    <td><?php echo $row[0];?></td>
+    <td><?php echo $row[1];?></td>
+  </tr/>
+<?php endforeach;
+endif; ?>
+</tbody>
+</table>
   <div style='width:100%; height:500px'></div>
   <a class='MiniHeading' name = 'breakdown'> Breakdown</a>
   <div style='width:100%; height:500px'></div>
