@@ -65,55 +65,78 @@ border-color:#33446a;
   border-bottom:0.2vw solid;
   border-color:#33446a;
 }
-
+.addForm{
+border:solid 0.5vw;
+border-radius: 0.8vw;
+border-color:#33446a;
+}
 .MiniHeading {
-      font-family: Futura;
-      font-size: 5vw;
-      font-weight: bold;
-      font-style: normal;
-      font-stretch: normal;
-      line-height: normal;
-      letter-spacing: normal;
-      /* text-align: center; */
-      color: #33446a;
-    }
+  font-family: Futura;
+  font-size: 5vw;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  /* text-align: center; */
+  color: #33446a;
+}
+.MiniHeadingSmall{
+  font-family: Futura;
+  font-size: 2vw;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  /* text-align: center; */
+  color: #33446a;
+}
 .MiniText{
-      font-family: AvenirNext;
-      font-size: 1.75vw;
-      font-weight: normal;
-      font-style: normal;
-      font-stretch: normal;
-      line-height: normal;
-      letter-spacing: normal;
-      text-align: justify;
-      color: #000000;
-    }
+  font-family: AvenirNext;
+  font-size: 1.75vw;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #000000;
+}
 .Button {
-      width: 10vw;
-      height: 3vw;
-      border-radius: 20px;
-      border-color: #33446a;
-      background-color: #ffffff;
-      /*Text*/
-      font-family: GoogleSans;
-      font-size: 2vw;
-      font-weight: 500;
-      font-style: normal;
-      font-stretch: normal;
-      line-height: normal;
-      letter-spacing: normal;
-      text-align: center;
-      color: #33446a;
-    }
+  width: 10vw;
+  height: 3vw;
+  border-radius: 20px;
+  border-color: #33446a;
+  background-color: #ffffff;
+  /*Text*/
+  font-family: GoogleSans;
+  font-size: 2vw;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #33446a;
+}
 .Button:hover{
   color: #ffffff;
   background-color: #33446a;
 }
-.Rectangle {
-      width: 100%;
-      height: 17vw;
-      background-color: #daecf1;
-    }
+.textBox{
+  height: 1.5vw;
+  border-radius: 8px;
+  border-color: #33446a;
+  background-color: #ffffff;
+  /*Text*/
+  font-family: GoogleSans;
+  font-size: 1vw;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
 .Header-title1 {
   font-family: GoogleSans;
   font-size: 86px;
