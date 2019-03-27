@@ -30,18 +30,25 @@
     </div>
   </header>
   <a class='MiniHeading' name = 'committee'>Committee</a>
-<div style='width:100%; height:500px'>
-    <form action='listMember.php' method='post'>
+    <form action='listMember.php' method='post' style='padding-bottom:10vw'>
         <select class='select' name='subcommittee'>
-          <option value="Program">Program</option>
-          <option value="Sponsors">Sponsors</option>
-          <option value="Registration">Registration</option>
-          <option value="Finance">Finance</option>
-          <option value="Room Assignment">Room Assignment</option>
+          <?php
+          $sql = "SELECT name FROM Subcommittee";
+          $stmt = $dbh->prepare($sql);
+          $stmt->execute();
+          $rows = $stmt->fetchAll();
+          if(!is_array($rows)){
+            print_r($rows);
+            echo "error no Subcommittees";
+          }
+          if(is_array($rows)):
+          foreach($rows as $row):?>
+            <option value=<?php echo $row[0]?>><?php echo $row[0];?></option>
+        <?php endforeach;
+        endif; ?>
         </select>
       <input type='submit' class='Button'>
     </form>
-  </div>
   <a class='MiniHeading' name = 'attendees'> Attendees</a>
   <form action='addAttendee.php' method='post'>
     <p>First Name</p>
@@ -55,14 +62,33 @@
     </select>
     <p>Company Name (If Sponsor)</p>
     <input type="text" name="companyname">
-    <input type='submit'>
+    <input type='submit'  class='Button'>
+  </form>
+  <form action='ListRoomOccupant.php' method='post'>
+      <select class='select' name='roomNum'>
+        <?php
+        $sql = "SELECT room_number FROM room";
+        $stmt = $dbh->prepare($sql);
+        $stmt->execute();
+        $rows = $stmt->fetchAll();
+        if(!is_array($rows)){
+          print_r($rows);
+          echo "error no rooms booked";
+        }
+        if(is_array($rows)):
+        foreach($rows as $row):?>
+          <option value=<?php echo $row[0]?>><?php echo $row[0];?></option>
+      <?php endforeach;
+      endif; ?>
+      </select>
+    <input type='submit' class='Button'>
   </form>
   <div style='width:100%; height:500px'></div>
   <a class='MiniHeading' name = 'sponsors'> Sponsors</a>
 <table class='table_sponsor MiniText'>
   <thead>
     <tr>
-      <th>Company Name</th>
+      <th style='border-right:solid 0.2vw; border-color:#33446a'>Company Name</th>
       <th>Sponsor Level</th>
     </tr>
   </thead>
