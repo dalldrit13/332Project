@@ -136,7 +136,7 @@ insert into Committee_Member values ('Jordan','Rogers');
 insert into Subcommittee values ('Program','Abigail','Kozma');
 insert into Subcommittee values ('Registration','Matt','Kruzich');
 insert into Subcommittee values ('Sponsors','Devin','Alldrit');
-insert into Subcommittee values ('Room Assignment','Tamara','Djukic');
+insert into Subcommittee values ('Room_Assignment','Tamara','Djukic');
 insert into Subcommittee values ('Finance','Molly','White');
 
 /*=========================== is member ===============================*/
@@ -144,7 +144,7 @@ insert into ismember values ('Abigail','Kozma', 'Program');
 insert into ismember values ('Matt','Kruzich', 'Registration');
 insert into ismember values ('Brad','Pitt','Sponsors');
 insert into ismember values ('Devin','Alldrit','Sponsors');
-insert into ismember values ('Tamara','Djukic', 'Room Assignment');
+insert into ismember values ('Tamara','Djukic', 'Room_Assignment');
 insert into ismember values ('Maddie','Leranbaum','Sponsors');
 insert into ismember values ('Molly','White', 'Finance');
 insert into ismember values ('Sarah','Smith','Sponsors');
@@ -226,28 +226,25 @@ insert into room values(202,4);
 insert into room values(203,2);
 insert into room values(204,2);
 insert into room values(205,4);
-insert into room values(206,2);
-insert into room values(207,4);
-insert into room values(208,4);
-insert into room values(209,2);
-insert into room values(210,4);
 
 insert into isInRoom values('Harry', 'Potter', 201);
 insert into isInRoom values('Lord', 'Voldemort', 201);
 insert into isInRoom values('Albus', 'Dumbledore', 201);
-insert into isInRoom values('Ron', 'Weasley', 203);
-insert into isInRoom values('Dobby', 'Elf', 203);
-insert into isInRoom values('Sirius', 'Black', 203);
-insert into isInRoom values('Luna', 'Lovegood', 204);
-insert into isInRoom values('Gellert', 'Grindelwald', 204);
-insert into isInRoom values('Ginny', 'Weasley', 204);
-insert into isInRoom values('Newt', 'Scamander', 205);
-insert into isInRoom values('James', 'Potter', 205);
-insert into isInRoom values('Peter', 'Pettigrew', 205);
-insert into isInRoom values('Regulus', 'Black', 210);
-insert into isInRoom values('Lavender', 'Brown', 210);
-insert into isInRoom values('Oliver', 'Wood', 209);
-insert into isInRoom values('Nicholas', 'Flamel', 209);
+insert into isInRoom values('Ron', 'Weasley', 201);
+insert into isInRoom values('Dobby', 'Elf', 202);
+insert into isInRoom values('Sirius', 'Black', 202);
+insert into isInRoom values('Luna', 'Lovegood', 202);
+insert into isInRoom values('Gellert', 'Grindelwald', 202);
+insert into isInRoom values('Ginny', 'Weasley', 203);
+insert into isInRoom values('Newt', 'Scamander', 203);
+insert into isInRoom values('James', 'Potter', 204);
+insert into isInRoom values('Peter', 'Pettigrew', 204);
+insert into isInRoom values('Regulus', 'Black', 205);
+insert into isInRoom values('Lavender', 'Brown', 205);
+insert into isInRoom values('Oliver', 'Wood', 205);
+insert into isInRoom values('Nicholas', 'Flamel', 205);
+
+update room set occupancy = 0; 
 
 
 /*===================== sponsors ---------------------------------*/
