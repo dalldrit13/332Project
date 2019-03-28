@@ -51,7 +51,7 @@ border-color: #fff transparent transparent;
 }
 .table_sponsor{
 border-radius: 0.8vw;
-border: 0.5vw solid;
+border: 0.35vw solid;
 border-color:#33446a;
 }
 .table_sponsor th{
@@ -69,6 +69,10 @@ border-color:#33446a;
 border:solid 0.5vw;
 border-radius: 0.8vw;
 border-color:#33446a;
+}
+.schedule:hover{
+  background-color: #33446a;
+  color:#ffffff;
 }
 .MiniHeading {
   font-family: Futura;

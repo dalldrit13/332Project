@@ -6,7 +6,7 @@
 <body>
   <select class='select' name=<?php echo $name?>>
     <?php
-    $sql = "SELECT $columnAttr FROM $tableName";
+    $sql = "SELECT DISTINCT $columnAttr FROM $tableName";
     $stmt = $dbh->prepare($sql);
     $stmt->execute();
     $rows = $stmt->fetchAll();

@@ -14,6 +14,7 @@
       <a href="#committee">Committee</a>
       <a href="#attendees">Attendees</a>
       <a href="#sponsors">Sponsors</a>
+      <a href="#schedule">Schedule</a>
       <a href="#breakdown">Breakdown</a>
     </div>
   </nav>
@@ -33,13 +34,16 @@
 
 <!-- ___________________Committee Info____________________________ -->
   <a class='MiniHeading' name = 'committee'>Committee</a>
-    <form action='listMember.php' method='post' style='padding-bottom:10vw'>
+    <form action='listMember.php' method='post'>
+
       <?php $name = 'subcommittee';
       $columnAttr = 'name';
       $tableName = 'Subcommittee';
       require 'MakeSelectBar.php'; ?>
+
       <input type='submit' class='Button'>
     </form>
+    <div style='height:10vw; width:100%'></div>
 
 
 <!--___________________Attendee's Info___________________________-->
@@ -79,6 +83,7 @@
   <form class='addForm' action='addAttendee.php' method='post'>
     <p class='MiniText'>First Name</p>
     <input type='text' name='firstname' class='textBox'>
+    <input type='hidden' name='roomCheck' value='0'>
     <input type='checkbox' name='roomCheck' class='tick'> If student and needs room
     <p class='MiniText'>Last Name</p>
     <input type='text' name='lastname' class='textBox'>
@@ -107,8 +112,7 @@
 </th>
 <thead>
 </table>
-  <div style='width:100%; height:500px'></div>
-
+<div style='height:10vw; width:100%'></div>
 
 <!--___________________Sppnsor Info___________________________-->
   <a class='MiniHeading' name = 'sponsors'> Sponsors</a>
@@ -158,8 +162,7 @@ endif; ?>
     $stmt2 = $dbh->prepare($sql);
     $stmt2->execute();
     $rows = $stmt2->fetchAll();
-    if(!is_array($rows)){
-      print_r($rows);
+    if($rows == NULL){
       echo "error no companies or job postings yet";
     }
     if(is_array($rows)):
@@ -182,30 +185,94 @@ endif; ?>
 <p class='MiniHeadingSmall'> Select Company to look at job postings </p>
 
 <form action='listJobs.php' method='post' style='padding-bottom:10vw'>
-        <select class='select' name='job_listing'>
-          <?php
-          $sql = "SELECT Distinct company_name FROM job_posting";
-          $stmt = $dbh->prepare($sql);
-          $stmt->execute();
-          $rows = $stmt->fetchAll();
-          if(!is_array($rows)){
-            print_r($rows);
-            echo "error no Companies";
-          }
-          if(is_array($rows)):
-          foreach($rows as $row):?>
-            <option value=<?php echo $row[0]?>><?php echo $row[0];?></option>
-        <?php endforeach;
-        endif; ?>
-        </select>
+  <?php $name = 'job_listing';
+  $columnAttr = 'company_name';
+  $tableName = 'job_posting';
+  require 'MakeSelectBar.php'; ?>
       <input type='submit' class='Button'>
     </form>
-
+  <div style='height:10vw; width:100%'></div>
 
 <!--___________________Breakdown Info___________________________-->
+  <a class='MiniHeading' name ='schedule'> Schedule</a>
+  <table style='width:100%'>
+    <thead>
+      <tr>
+        <th>
+    <p class='MiniHeadingSmall'>Day 1</p></th>
+    <th>
+    <p class='MiniHeadingSmall'>Day 2</p></th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td style='vertical-align:top'>
+    <?php $day = 1;
+    require 'schedule.php';?></td>
+    <td style='vertical-align:top'>
+    <?php $day = 2;
+    require 'schedule.php';?></td>
+  </tr>
+  </tbody>
+  </table>
+  
+  <div style='height:10vw; width:100%'></div>
+<!--___________________Breakdown Info___________________________-->
   <a class='MiniHeading' name = 'breakdown'> Breakdown</a>
-  <div style='width:100%; height:500px'></div>
-
+  <table class='table_sponsor MiniText'>
+    <thead>
+      <tr>
+        <th style='font-size:4vw'>Source</th>
+        <th style='font-size:4vw'>Funds</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+      <?php
+      $sql = "SELECT COUNT(name) FROM company WHERE sponsorship_level = :sponsorLevel";
+      $stmt2 = $dbh->prepare($sql);
+      $stmt2->bindParam(':sponsorLevel', $sponsor_level);
+      $sponsor_level = 'Bronze';
+      $stmt2->execute();
+      $bronze = $stmt2->fetch();
+      $sponsor_level = 'Silver';
+      $stmt2->execute();
+      $silver = $stmt2->fetch();
+      $sponsor_level = 'Gold';
+      $stmt2->execute();
+      $gold = $stmt2->fetch();
+      $sponsor_level = 'Platinum';
+      $stmt2->execute();
+      $platinum = $stmt2->fetch();
+      $sponsor = ($bronze[0]*1000)+($silver[0]*3000)+($gold[0]*5000)+($platinum[0]*10000);?>
+      <td style='font-size:3vw'>Sponsorship</td>
+      <td style='font-size:3vw'>$<?php echo $sponsor?></td></tr>
+      <tr>
+      <?php
+      $sql = "SELECT COUNT(first_name) FROM student";
+      $stmt2 = $dbh->prepare($sql);
+      $stmt2->execute();
+      $totalStudents = $stmt2->fetch();
+      $studentAmount = $totalStudents[0]*50;
+      ?>
+      <td style='font-size:3vw'>Students</td>
+      <td style='font-size:3vw'>$<?php echo $studentAmount?></td></tr>
+      <tr>
+        <?php
+        $sql = "SELECT COUNT(first_name) FROM professional";
+        $stmt2 = $dbh->prepare($sql);
+        $stmt2->execute();
+        $totalPros = $stmt2->fetch();
+        $ProAmount = $totalPros[0]*50;
+        ?>
+      <td style='font-size:3vw'>Professionals</td>
+      <td style='font-size:3vw'>$<?php echo $ProAmount?></td></tr>
+      <td style='font-size:3vw'>Total</td>
+      <td style='font-size:3vw'>$<?php $total = $sponsor+$studentAmount+$ProAmount;
+      echo $total;?></td>
+    </tbody>
+  </table>
+  <div style='height:10vw; width:100%'></div>
 </body>
 
 </html>

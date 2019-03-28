@@ -24,9 +24,8 @@
   $compname = $_POST["job_listing"];
   $stmt->execute();
   $rows = $stmt->fetchAll();
-  if(!is_array($rows)){
-    print_r($rows);
-    echo "error no jobs";
+  if($rows==NULL){
+    echo "No jobs for this company";
   }
   if(is_array($rows)):
   foreach($rows as $row):?>
