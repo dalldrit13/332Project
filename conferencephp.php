@@ -143,7 +143,10 @@
 endif; ?>
 </tbody>
 </table>
-
+<table style='width:100%'>
+  <thead>
+    <tr>
+      <th>
 <!--Table for sponsors and the job postings-->
 <p class='MiniHeadingSmall'>Job Postings</p>
 <table class='table_sponsor MiniText'>
@@ -179,21 +182,61 @@ endif; ?>
    endif; ?>
   </tbody>
 </table>
+</th>
 
+<th>
 <!--look at a specific companies job postings-->
 <br>
 <p class='MiniHeadingSmall'> Select Company to look at job postings </p>
 
-<form action='listJobs.php' method='post' style='padding-bottom:10vw'>
+<form action='listJobs.php' method='post' style='padding-bottom:2vw'>
   <?php $name = 'job_listing';
   $columnAttr = 'company_name';
   $tableName = 'job_posting';
   require 'MakeSelectBar.php'; ?>
       <input type='submit' class='Button'>
-    </form>
+    </form></th>
+  </tr>
+  </thead>
+</table>
+
+
+
+<table style='width:100%'>
+  <thead>
+    <tr>
+      <th>
+    <!--Add a company to the database-->
+    <p class='MiniHeadingSmall'>Add a Company</p>
+    <form action='addCompanytoDataBase.php' method='post' style='padding-bottom:2vw'>
+    <p class='MiniText'>Company Name</p>
+    <input type='text' name='companyname' class='textBox'>
+    <select class='select' style='width:15vw' name="level">
+      <option value="Bronze">Bronze</option>
+      <option value="Silver">Silver</option>
+      <option value="Gold">Gold</option>
+      <option value="Platinum">Platinum</option>
+    </select>
+    <input type='submit'  class='Button'>
+    </form></th>
+
+    <th>
+    <!--Delete a company from the database-->
+    <p class='MiniHeadingSmall'> Select Company to Delete </p>
+    <form action='DeleteCompany.php' method='post'>
+      <?php $name = 'companyname';
+      $columnAttr = 'name';
+      $tableName = 'company';
+        require 'MakeSelectBar.php'; ?>
+      <input type='submit' class='Button'>
+    </form></th>
+  </tr>
+  </thead>
+</table>
+
   <div style='height:10vw; width:100%'></div>
 
-<!--___________________Breakdown Info___________________________-->
+<!--___________________Schedule___________________________-->
   <a class='MiniHeading' name ='schedule'> Schedule</a>
   <table style='width:100%'>
     <thead>
@@ -215,7 +258,7 @@ endif; ?>
   </tr>
   </tbody>
   </table>
-  
+
   <div style='height:10vw; width:100%'></div>
 <!--___________________Breakdown Info___________________________-->
   <a class='MiniHeading' name = 'breakdown'> Breakdown</a>
