@@ -4,21 +4,21 @@
   <link rel="stylesheet" href="conference.css">
 </head>
 <body>
-  <select class='select' name=<?php echo $name?>>
     <?php
     $sql = "SELECT DISTINCT $columnAttr FROM $tableName";
     $stmt = $dbh->prepare($sql);
     $stmt->execute();
     $rows = $stmt->fetchAll();
-    if(!is_array($rows)){
-      print_r($rows);
-      echo "error no $tableName s";
+    if($rows==null){
+      echo "error no ".$tableName."s";
     }
-    if(is_array($rows)):
+    if($rows!=null):?>
+      <select class='select' name=<?php echo $name?>>
+    <?php
     foreach($rows as $row):?>
       <option value=<?php echo $row[0]?>><?php echo $row[0];?></option>
   <?php endforeach;
-  endif; ?>
+endif; ?>
   </select>
 </body>
 </html>

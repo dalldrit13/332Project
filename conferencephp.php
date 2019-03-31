@@ -90,7 +90,10 @@
     <select class='select' style='width:15vw' name="type">
       <option value="student">Student</option>
       <option value="professional">Professional</option>
+      <?php require 'companyExists.php';
+      if($rows!=null):?>
       <option value="sponsor">Sponsor</option>
+    <?php endif;?>
     </select>
     <p class='MiniText'>Company Name (If Sponsor)</p>
     <?php $name = 'companyname';
@@ -129,8 +132,7 @@
   $stmt = $dbh->prepare($sql);
   $stmt->execute();
   $rows = $stmt->fetchAll();
-  if(!is_array($rows)){
-    print_r($rows);
+  if(($rows == null)){
     echo "error no companies yet";
   }
   if(is_array($rows)):
@@ -193,8 +195,10 @@ endif; ?>
   <?php $name = 'job_listing';
   $columnAttr = 'company_name';
   $tableName = 'job_posting';
-  require 'MakeSelectBar.php'; ?>
+  require 'MakeSelectBar.php';
+  if($rows!=null):?>
       <input type='submit' class='Button'>
+    <?php endif;?>
     </form></th>
   </tr>
   </thead>
@@ -228,7 +232,10 @@ endif; ?>
       $columnAttr = 'name';
       $tableName = 'company';
         require 'MakeSelectBar.php'; ?>
+        <?php
+        if($rows!=null):?>
       <input type='submit' class='Button'>
+    <?php endif;?>
     </form></th>
   </tr>
   </thead>

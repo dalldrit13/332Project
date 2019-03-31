@@ -18,8 +18,7 @@
     $stmt->execute();
     $rows = $stmt->fetchAll();
     if(($rows == null)){
-      print_r($rows);
-      echo "error no student attendees yet";
+      echo "error no ".$typename." attendees yet";
     }
     if(is_array($rows)):
     foreach($rows as $row):?>
