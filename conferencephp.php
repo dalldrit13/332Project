@@ -16,6 +16,7 @@
       <a href="#sponsors">Sponsors</a>
       <a href="#schedule">Schedule</a>
       <a href="#breakdown">Breakdown</a>
+      <a href="#contributors">Web Developers</a>
     </div>
   </nav>
     <!--<div class='container'>-->
@@ -268,7 +269,7 @@ endif; ?>
 
   <div style='height:10vw; width:100%'></div>
 <!--___________________Breakdown Info___________________________-->
-  <a class='MiniHeading' name = 'breakdown'> Breakdown</a>
+  <a class='MiniHeading' name = 'breakdown'>Breakdown</a>
   <table class='table_sponsor MiniText'>
     <thead>
       <tr>
@@ -322,6 +323,9 @@ endif; ?>
       echo $total;?></td>
     </tbody>
   </table>
+  <div style='height:10vw; width:100%'></div>
+  <a class='MiniHeading' name ='contributors'>Web Developers</a>
+  <p class='MiniHeadingSmall'>CMPE 332 Group 38 <br> Devin Alldrit <br> Abigail Kozma</p>
   <div style='height:10vw; width:100%'></div>
 </body>
 
